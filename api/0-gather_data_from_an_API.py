@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-import json
+""" This defines the module for gathering data from an api"""
 import sys
 import requests
 
-""" This defines the module for gathering data from an api"""
 
 
 def get_employee_todo(employee_id):
