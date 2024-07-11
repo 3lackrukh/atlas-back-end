@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """ This defines the module for gathering data from an api"""
-import sys
 import requests
-
+import sys
 
 
 def get_employee_todo(employee_id):
@@ -11,10 +10,10 @@ def get_employee_todo(employee_id):
     # check that employee_id is an integer
     if not isinstance(employee_id, int):
         raise TypeError("employee_id must be an integer")
-    
+
     # base URL dor the API
     base_url = 'https://jsonplaceholder.typicode.com'
-    
+
     # fetch todos for the given employee
     todo_url = f'{base_url}/todos?userId={employee_id}'
     user_url = f'{base_url}/users?id={employee_id}'
@@ -24,15 +23,15 @@ def get_employee_todo(employee_id):
     if response1.status_code != 200:
         print(f'Failed to fetch todos for employee ID {employee_id}.')
         return
-    
+
     if response2.status_code != 200:
         print(f'Failed to fetch name for employee ID {employee_id}.')
         return
-    
+
     # retrieve todos and employee name
     todos = response1.json()
     emp_name = response2.json()[0]['name']
-    #calculate the number of completed and total tasks
+    # calculate the number of completed and total tasks
     num_tasks = len(todos)
     done_tasks = len([task for task in todos if task['completed']])
 
