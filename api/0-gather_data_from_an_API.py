@@ -3,6 +3,9 @@ import json
 import sys
 import requests
 
+""" This defines the module for gathering data from an api"""
+
+
 def get_employee_todo(employee_id):
     """ This method displays an employee's todo list progress"""
 
