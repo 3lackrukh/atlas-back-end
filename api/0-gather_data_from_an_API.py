@@ -41,7 +41,7 @@ def get_employee_todo(employee_id):
     # display titles of completed tasks
     for task in todos:
         if task['completed']:
-            print('\t' + task['title'])
+            print('\t ' + task['title'])
 
 
 if __name__ == '__main__':
