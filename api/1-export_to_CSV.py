@@ -31,7 +31,7 @@ def get_employee_todo(employee_id):
 
     # retrieve todos and employee name
     todos = response1.json()
-    emp_name = response2.json()[0]['name']
+    user_name = response2.json()[0]['username']
 
     # construct CSV file name
     file_name = f'{employee_id}.csv'
@@ -41,7 +41,7 @@ def get_employee_todo(employee_id):
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for task in todos:
             writer.writerow([
-                employee_id, emp_name,
+                employee_id, user_name,
                 task['completed'], task['title']])
 
 
