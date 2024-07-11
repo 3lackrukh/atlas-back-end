@@ -40,7 +40,7 @@ def get_employee_todo(employee_id):
     data = [{
         "task": task['title'],
         "completed": task['completed'],
-        "username": user_name 
+        "username": user_name
     } for task in todos]
 
     format = {str(employee_id): data}
