@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" This defines the module for exporting employee task data to CSV"""
+""" This defines the module for exporting employee task data to json file"""
 import json
 import requests
 import sys
 
 
 def get_employee_todo(employee_id):
-    """ This method reports an employee's todo list progress in CSV format"""
+    """ This method reports an employee's todo list progress in json format"""
 
     # check that employee_id is an integer
     if not isinstance(employee_id, int):
